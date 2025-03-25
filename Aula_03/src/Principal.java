@@ -26,6 +26,20 @@ public class Principal {
 
         // ler os dados do fornecedor
 
+        System.out.println("Digite o nome do fornecedor:");
+        String nomeFornecedor = leitor.next() + leitor.nextLine();
+
+        System.out.println("Digite o telefone do fornecedor:");
+        String telefoneFornecedor = leitor.next();
+
+        System.out.println("Digite o CNPJ do fornecedor:");
+        String cnpjFornecedor = leitor.next();
+
+        // Criar o objeto Fornecedor
+        Fornecedor fornecedor = new Fornecedor();
+        fornecedor.nome = nomeFornecedor;
+        fornecedor.telefone = telefoneFornecedor;
+        fornecedor.cnpj = cnpjFornecedor;
 
         //Objeto produto
         Produtos produto = new Produtos();
@@ -42,6 +56,12 @@ public class Principal {
                 "\n" + "id do produto: " + produto.id +
                 "\n" + "preço da produto: " + produto.preco+
                 "\n" + "tem disponivel? " + produto.disponivel );
+
+        System.out.println(
+                "nome do fornecedor: " + fornecedor.nome +
+                        "\n" + "tel do fornecedor: " + fornecedor.telefone +
+                        "\n" + "cnpj do fornecedor: " + fornecedor.cnpj
+                         );
 
 
 
